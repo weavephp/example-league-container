@@ -27,12 +27,12 @@ class App
 	 * This method is League Container specific.
 	 *
 	 * @param Container $container   The container.
-	 * @param array     $config      Optional config array as provided from _loadConfig().
+	 * @param array     $config      Optional config array as provided from loadConfig().
 	 * @param string    $environment Optional indication of the runtime environment.
 	 *
 	 * @return null
 	 */
-	protected function _configureContainer(Container $container, array $config = [], $environment = null)
+	protected function configureContainer(Container $container, array $config = [], $environment = null)
 	{
 		// Specify we want to use Relay for our Middleware
 		$container->add(
@@ -94,7 +94,7 @@ class App
 	 *
 	 * @return mixed Whatever the chosen Middleware stack uses for a pipeline of middlewares.
 	 */
-	protected function _provideMiddlewarePipeline($pipelineName = null)
+	protected function provideMiddlewarePipeline($pipelineName = null)
 	{
 		switch ($pipelineName) {
 			case 'uppercaseOwner':
@@ -137,7 +137,7 @@ class App
 	 *
 	 * @return null
 	 */
-	protected function _provideRouteConfiguration($router)
+	protected function provideRouteConfiguration($router)
 	{
 		$router->get(
 			'root',
