@@ -43,7 +43,7 @@ class App
 		// Specify we want to use Zend Diactoros for our PSR7 stuff
 		$container->add(
 			\Weave\Http\ResponseEmitterInterface::class,
-			\Weave\Http\ZendDiactoros\responseEmitter::class
+			\Weave\Http\ZendDiactoros\ResponseEmitter::class
 		);
 
 		$container->add(
